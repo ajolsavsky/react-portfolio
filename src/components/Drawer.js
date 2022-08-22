@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import HomeIcon from '@mui/icons-material/Home';
 import { 
     Drawer,
     Divider,
@@ -19,7 +18,7 @@ function DrawerComponent() {
     <>
         <Drawer
             open={openDrawer}
-            anchor="right"
+            anchor="left"
             onClose={() => setOpenDrawer(false)}
         >
             <List>

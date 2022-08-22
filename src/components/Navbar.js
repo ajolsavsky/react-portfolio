@@ -10,10 +10,10 @@ function NavBar() {
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static">
             <Toolbar>
+              <DrawerComponent />
               <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
                 Alex Olsavsky
               </Typography>
-              <DrawerComponent />
             </Toolbar>
           </AppBar>
         </Box>
