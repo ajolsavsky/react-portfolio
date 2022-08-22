@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
 import { 
     Drawer,
     Divider,
@@ -23,17 +24,29 @@ function DrawerComponent() {
         >
             <List>
                 <ListItem>
-                    Home
+                    <ListItemText>
+                        Home
+                    </ListItemText>
                 </ListItem>
+                <Divider />
                 <ListItem>
-                    Portfolio
+                    <ListItemText>
+                        Portfolio
+                    </ListItemText>
                 </ListItem>
+                <Divider />
                 <ListItem>
-                    Resume
+                    <ListItemText>
+                        Resume
+                    </ListItemText>
                 </ListItem>
+                <Divider />
                 <ListItem>
-                    Contact
+                    <ListItemText>
+                        Contact
+                    </ListItemText>
                 </ListItem>
+                <Divider />
             </List>
         </Drawer>
             
