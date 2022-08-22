@@ -16,7 +16,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const pages = ['about', 'portfolio', 'resume', 'contact'];
+const pages = ['home', 'work', 'resume', 'contact'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -81,15 +81,13 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                    <Typography textAlign="center">
+                        <Link to={`/react-portfolio/${page}`}>
+                        {page}
+                        </Link>
+                    </Typography>
                 </MenuItem>
               ))}
-
-              <MenuItem key='hardcoded' onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                  <Link to="/portfolio">HardCoded</Link>
-                </Typography>
-            </MenuItem>
             </Menu>
           </Box>
           <Typography
@@ -112,6 +110,7 @@ const ResponsiveAppBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
+                <Link to={`/react-portfolio/${page}`}>
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -119,6 +118,7 @@ const ResponsiveAppBar = () => {
               >
                 {page}
               </Button>
+              </Link>
             ))}
           </Box>
 
