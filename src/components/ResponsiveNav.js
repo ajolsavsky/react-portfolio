@@ -87,7 +87,7 @@ const ResponsiveAppBar = () => {
 
               <MenuItem key='hardcoded' onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                  HardCoded
+                  <Link to="/portfolio">HardCoded</Link>
                 </Typography>
             </MenuItem>
             </Menu>

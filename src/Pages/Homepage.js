@@ -4,7 +4,7 @@ import About from "../components/About";
 function homePage() {
     return (
         <>
-        Welcome to my homepage!
+        Welcome to my HOMEPAGE!
         <About />
         </>
     )

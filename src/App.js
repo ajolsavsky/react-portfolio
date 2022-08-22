@@ -7,6 +7,9 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 //Pages and Components
 import homePage from "./Pages/Homepage"
+import portfolioPage from './Pages/Portfolio';
+import resumePage from './Pages/Resume';
+import contactPage from './Pages/Contact';
 import NavBar from './components/Navbar';
 import ResponsiveAppBar from './components/ResponsiveNav';
 import About from './components/About';
@@ -19,10 +22,11 @@ function App() {
       <Router>
       <ResponsiveAppBar />
       <Switch>
-        <Route path='/' exact component={homePage}/>
+        <Route path='/react-portfolio' exact component={homePage}/>
+        <Route path='/react-portfolio/work' exact component={portfolioPage}/>
+        <Route path='/react-portfolio/resume' exact component={resumePage}/>
+        <Route path='/react-portfolio/contact' exact component={contactPage}/>
       </Switch>
-      <About />
-      <Portfolio />
       </Router>
     </div>
   );
