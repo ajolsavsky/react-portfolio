@@ -123,8 +123,18 @@ const ResponsiveAppBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-              <GitHubIcon src="https://github.com/ajolsavsky" />
-              <LinkedInIcon src="https://github.com/ajolsavsky" />
+            <IconButton
+                href="https://github.com/ajolsavsky"
+                target="_blank"
+            >
+                <GitHubIcon />
+            </IconButton>
+            <IconButton
+                href="https://linkedin.com/in/alexandraolsavsky"
+                target="_blank"
+            >
+                <LinkedInIcon/>
+            </IconButton>
 
           </Box>
 
