@@ -3,7 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Drawer from './Drawer';
+import DrawerComponent from './Drawer';
 
 function NavBar() {
     return (
@@ -13,7 +13,7 @@ function NavBar() {
               <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
                 Alex Olsavsky
               </Typography>
-              <Drawer />
+              <DrawerComponent />
             </Toolbar>
           </AppBar>
         </Box>
