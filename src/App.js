@@ -13,7 +13,6 @@ import contactPage from './Pages/Contact';
 import NavBar from './components/Navbar';
 import ResponsiveAppBar from './components/ResponsiveNav';
 import About from './components/About';
-import Portfolio from './components/Portfolio';
 
 function App() {
   return (
@@ -23,6 +22,7 @@ function App() {
       <ResponsiveAppBar />
       <Switch>
         <Route path='/react-portfolio' exact component={homePage}/>
+        <Route path='/react-portfolio/home' exact component={homePage}/>
         <Route path='/react-portfolio/work' exact component={portfolioPage}/>
         <Route path='/react-portfolio/resume' exact component={resumePage}/>
         <Route path='/react-portfolio/contact' exact component={contactPage}/>
