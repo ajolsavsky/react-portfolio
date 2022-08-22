@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from "react-router-dom";
 import {
     AppBar,
     Box,
@@ -80,9 +81,15 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" src="#{page}">{page}</Typography>
+                  <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
+
+              <MenuItem key='hardcoded' onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">
+                  HardCoded
+                </Typography>
+            </MenuItem>
             </Menu>
           </Box>
           <Typography
