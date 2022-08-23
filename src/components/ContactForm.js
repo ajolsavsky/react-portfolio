@@ -7,9 +7,9 @@ import Box from '@mui/material/Box';
 const ContactForm = () => {
   const form = useRef();
 
-  const [inputName, setName] = useState("");
-  const [inputEmail, setEmail] = useState("");
-  const [inputMessage, setMessage] = useState("");
+//   const [inputName, setName] = useState("");
+//   const [inputEmail, setEmail] = useState("");
+//   const [inputMessage, setMessage] = useState("");
 
 
   const sendEmail = async (e) => {
@@ -21,9 +21,9 @@ const ContactForm = () => {
       }, (error) => {
           console.log(error.text);
       });
-      setName("");
-      setEmail("");
-      setMessage("");
+    //   setName("");
+    //   setEmail("");
+    //   setMessage("");
   };
 
   return (
@@ -37,11 +37,11 @@ const ContactForm = () => {
     >
         <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
-        <input type="text" name="user_name" onChange={(e) => setName(e.target.value)}/>
+        <input type="text" name="user_name"/>
         <label>Email</label>
-        <input type="email" name="user_email" onChange={(e) => setEmail(e.target.value)}/>
+        <input type="email" name="user_email"/>
         <label>Message</label>
-        <textarea name="message" onChange={(e) => setMessage(e.target.value)}/>
+        <textarea name="message"/>
         <input type="submit" value="Send" />
         </form>
     </Box>
