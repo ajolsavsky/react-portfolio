@@ -2,19 +2,30 @@ import React from 'react';
 import {
     Container,
     Grid,
-    Grid2
+    Grid2,
+    Typography,
+    Box
 } from '@mui/material';
 
 function About() {
     return (
         <>
-        <Grid>
-
+        <Grid xs={12}>
+            <Typography variant="h2">
+                Hi, I'm Alex!
+            </Typography>
         </Grid>
-
-        <Container maxWidth="lg">
-            This is my About container
-        </Container>
+        <Box>
+            <Typography variant="h6">
+                I started my professional life as a professional opera singer, and now I'm a software developer! How did I make the leap? Read on.
+            </Typography>
+            <Typography variant="h6">
+                I started my professional life as a professional opera singer, and now I'm a software developer! How did I make the leap? Read on.
+            </Typography>
+            <Typography variant="h6">
+                I started my professional life as a professional opera singer, and now I'm a software developer! How did I make the leap? Read on.
+            </Typography>
+        </Box>
         </>
         
     )

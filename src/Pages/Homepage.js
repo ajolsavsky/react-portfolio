@@ -1,10 +1,25 @@
 import React from "react";
 import About from "../components/About";
+import {
+    Container,
+    Typography,
+    Box
+} from '@mui/material';
+import headshot from "../images/headshot.png"
 
 function homePage() {
     return (
         <>
-        Welcome to my HOMEPAGE!
+        <Box>
+            <Container>
+            <Box>
+                <img
+                src={headshot}
+                alt="Alex Olsavsky Headshot"
+                />
+            </Box>
+            </Container>
+        </Box>
         <About />
         </>
     )
