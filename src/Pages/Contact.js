@@ -1,9 +1,10 @@
 import React from "react";
+import ContactForm from "../components/ContactForm";
 
 function contactPage() {
     return (
         <>
-        Welcome to my CONTACT
+        <ContactForm />
         </>
     )
 }

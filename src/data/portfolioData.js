@@ -17,6 +17,15 @@ const portfolioData = [
         githubRepo: "https://github.com/ajolsavsky",
         technologies: "Node, MongoDB, special space junk"
     },
+    {
+        title: "A third project",
+        subheader: "More about the project",
+        image: "https://i.picsum.photos/id/1006/3000/2000.jpg?hmac=x83pQQ7LW1UTo8HxBcIWuRIVeN_uCg0cG6keXvNvM8g",
+        description: "This is a project all about space! I am testing this now.",
+        deployedApp: "https://ajo-text-editor.herokuapp.com/",
+        githubRepo: "https://github.com/ajolsavsky",
+        technologies: "Node, MongoDB, special space junk"
+    },
 ]
 
 export default portfolioData;
