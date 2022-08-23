@@ -2,7 +2,6 @@ import React from "react";
 import About from "../components/About";
 import {
     Container,
-    Typography,
     Box
 } from '@mui/material';
 import headshot from "../images/headshot.png"

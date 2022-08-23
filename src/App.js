@@ -4,20 +4,21 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //MUI packagaes
 import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
 
 //Pages and Components
 import homePage from "./Pages/Homepage"
 import portfolioPage from './Pages/Portfolio';
 import resumePage from './Pages/Resume';
 import contactPage from './Pages/Contact';
-import NavBar from './components/Navbar';
 import ResponsiveAppBar from './components/ResponsiveNav';
-import About from './components/About';
 
 function App() {
   return (
     <div className="App">
       <CssBaseline />
+      <ThemeProvider theme={theme}>
       <Router>
       <ResponsiveAppBar />
       <Switch>
@@ -28,6 +29,7 @@ function App() {
         <Route path='/react-portfolio/contact' exact component={contactPage}/>
       </Switch>
       </Router>
+      </ThemeProvider>
     </div>
   );
 }
