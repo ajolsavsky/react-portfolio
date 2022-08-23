@@ -1,9 +1,10 @@
 import React from "react";
+import ResumeDownload from "../components/Resume";
 
 function resumePage() {
     return (
         <>
-        Welcome to my RESUME
+        <ResumeDownload />
         </>
     )
 }
