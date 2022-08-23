@@ -12,13 +12,12 @@ const ContactForm = () => {
   const [inputMessage, setMessage] = useState("");
 
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_hpg0czm', 'contact_form', form.current, '6gnYWh9TuBhzTn5Vs')
+    await emailjs.sendForm('service_hpg0czm', 'contact_form', form.current, '6gnYWh9TuBhzTn5Vs')
       .then((result) => {
           console.log(result.text, "This is the result text");
-          console.log(inputName, inputEmail, inputMessage);
       }, (error) => {
           console.log(error.text);
       });
@@ -38,11 +37,11 @@ const ContactForm = () => {
     >
         <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
-        <input type="text" name="user_name" onChange={(e) => setName(e.target.value)} value={inputName}/>
+        <input type="text" name="user_name" onChange={(e) => setName(e.target.value)}/>
         <label>Email</label>
-        <input type="email" name="user_email" onChange={(e) => setEmail(e.target.value)} value={inputEmail}/>
+        <input type="email" name="user_email" onChange={(e) => setEmail(e.target.value)}/>
         <label>Message</label>
-        <textarea name="message" onChange={(e) => setMessage(e.target.value)} value={inputMessage}/>
+        <textarea name="message" onChange={(e) => setMessage(e.target.value)}/>
         <input type="submit" value="Send" />
         </form>
     </Box>
