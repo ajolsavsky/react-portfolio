@@ -12,8 +12,8 @@ function portfolioPage() {
         <>
         <Box>
             <Grid>
-                {portfolioData.map((data, i) => {
-                    return <Cards key={i} {...data} />
+                {portfolioData.map((data) => {
+                    return <Cards key={data.id} {...data} />
                 })}
             </Grid>
         </Box>
