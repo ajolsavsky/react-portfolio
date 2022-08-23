@@ -1,16 +1,22 @@
 import React from "react";
 import {
-   Card,
-   CardContent,
-   CardHeader
+   Box,
+   Grid
 } from '@mui/material';
 import Cards from '../components/Cards'
+import portfolioData from "../data/portfolioData";
 
 
 function portfolioPage() {
     return (
         <>
-        <Cards />
+        <Box>
+            <Grid>
+                {portfolioData.map((data, i) => {
+                    return <Cards key={i} {...data} />
+                })}
+            </Grid>
+        </Box>
         </>
     )
 }
