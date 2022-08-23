@@ -1,5 +1,5 @@
 import React from "react";
-import ResumeDownload from "../components/Resume";
+import ResumeDownload from "../components/ResumeDownload";
 
 function resumePage() {
     return (

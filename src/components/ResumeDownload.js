@@ -1,15 +1,15 @@
 import React from "react";
+import pdf from '../images/AlexandraOlsavskyResume.pdf';
 
 const ResumeDownload = () => {
   return (
     <div>
       <a
-        href='../images/AlexandraOlsavskyResume2022.pdf'
+        href={pdf}
         download
       >
         Click to download
       </a>
-      <img src='./AOResume.pdf' alt="pdf"></img>
     </div>
   );
 }
