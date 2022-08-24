@@ -7,11 +7,6 @@ import Box from '@mui/material/Box';
 const ContactForm = () => {
   const form = useRef();
 
-//   const [inputName, setName] = useState("");
-//   const [inputEmail, setEmail] = useState("");
-//   const [inputMessage, setMessage] = useState("");
-
-
   const sendEmail = async (e) => {
     e.preventDefault();
 
@@ -21,20 +16,9 @@ const ContactForm = () => {
       }, (error) => {
           console.log(error.text);
       });
-    //   setName("");
-    //   setEmail("");
-    //   setMessage("");
   };
 
   return (
-    <Box
-      component="form"
-      sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
         <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name"/>
@@ -44,7 +28,6 @@ const ContactForm = () => {
         <textarea name="message"/>
         <input type="submit" value="Send" />
         </form>
-    </Box>
   );
 };
 
