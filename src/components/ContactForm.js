@@ -17,7 +17,7 @@ const ContactForm = () => {
 
     await emailjs.sendForm('service_hpg0czm', 'contact_form', form.current, '6gnYWh9TuBhzTn5Vs')
       .then((result) => {
-          console.log(result.text, "This is the result text");
+          console.log(result.text);
       }, (error) => {
           console.log(error.text);
       });
