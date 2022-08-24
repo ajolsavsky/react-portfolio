@@ -5,7 +5,7 @@ import NewContactForm from "../components/NewContactForm";
 function contactPage() {
     return (
         <>
-        <NewContactForm />
+        <ContactForm />
         </>
     )
 }
