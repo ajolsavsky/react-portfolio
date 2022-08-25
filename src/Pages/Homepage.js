@@ -27,7 +27,7 @@ function homePage() {
   <Grid item xs={6} sm={4} md={8}>
     <Box sx={{mt: 5, mr: 5, ml: 5 }}>
         <Typography variant="h2" sx={{ color: "primary.dark" }}>Hi, I'm Alex Olsavsky!</Typography>
-        <Typography variant="h5">I'm a software developer with roots as a nonprofit leader, arts educator, and professional singer.</Typography>
+        <Typography variant="h5">I'm a Full Stack Software Developer with roots as a nonprofit leader and professional singer.</Typography>
     </Box>
   </Grid>
 </Grid>

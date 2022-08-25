@@ -7,23 +7,37 @@ import {
     Icon
 } from '@mui/material';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import { Link } from "react-router-dom";
+
 
 function About() {
     return (
         <>
-        <Paper elevation={3} sx={{ m: 5, p: 5, backgroundColor: "primary.light"}}>
-            <Typography variant="h6">
-                I love the art of creating new things and the challenge of uncharted territories.
+        <Paper elevation={3} sx={{ m: 5, p: 5, borderColor: "primary.light"}}>
+            <Typography variant="h5" sx={{ color: "primary.dark", textDecoration:"underline", pb: 3 }}>
+                The Full(er) Story
             </Typography>
-            <Typography variant="h6">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            <Typography variant="h6" sx={{ pb: 2 }}>
+                I graduated with a Bachelor of Music degree from Roosevelt University primed for a career as an opera singer. How did I end up here? Read on, my friend!
             </Typography>
-            <Typography variant="h6">
-            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            <Typography variant="h6" sx={{ pb: 2 }}>
+            As a budding music entrepreneur, I got bitten by the technology bug early on as I dabbled in Wordpress to build an online presence and worked at a Digital Marketing firm to hone my skills. From there, my career has been a true hybrid of technological skills and creative endeavors, working Operations and Production through Executive level roles at an arts nonprofit to create community-informed and technologically innovative performance experiences. It wasn't long before I realized it was time to take the full plunge and become a full-time web developer.
             </Typography>
-            <Typography variant="h5" sx={{ color: "primary.dark" }}>
-            View my work <ArrowCircleRightIcon />
+            <Typography variant="h6" sx={{ pb: 2 }}>
+                I will earn a Bootcamp Certificate of Full State Web Development from Northwestern University in September 2022, and I can't wait to put my skills to the test.
             </Typography>
+            <Typography variant="h6" sx={{ pb: 2 }}>
+                My life as a performing artist has made me nimble, team-oriented, and well aquainted with meeting strict deadlines. I love collaborating with others and am a great communicator, problem solver, and lifelong learner with a positive "can do" attitude in all situations.
+            </Typography>
+            <Typography variant="h6" sx={{ pb: 3 }}>
+            As a lifelong learner, I approach all of my undertakings with determination and curiosity. At my computer, you'll often find me exploring new technologies and resources in an ever-evolving pursuit of self development.
+            </Typography>
+            <Link style={{textDecoration: 'none'}} to={`/react-portfolio/work`}>
+                <Typography variant="h5" sx={{ color: "primary.dark", "&:hover": {
+      color: 'primary.light'} }}>
+                View My Work  <ArrowCircleRightIcon />
+                </Typography>
+            </Link>
         </Paper>
         </>
         
