@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //MUI packagaes
-// import CssBaseline from '@mui/material/CssBaseline';
+import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 
@@ -20,7 +20,7 @@ import ResponsiveAppBar from './components/ResponsiveNav';
 function App() {
   return (
     <div className="App">
-      {/* <CssBaseline /> */}
+      <CssBaseline />
       <ThemeProvider theme={theme}>
       <Router>
       <ResponsiveAppBar />

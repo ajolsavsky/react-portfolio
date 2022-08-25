@@ -13,6 +13,12 @@ const theme = createTheme ({
       paper: '#ffffff',
       default: '#e3f6f9',
     },
+    button: {
+        textDecoration: 'none'
+      },
+    a: {
+        textDecoration: '!none'
+    }
   },
 });
 

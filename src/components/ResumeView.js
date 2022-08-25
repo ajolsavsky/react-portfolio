@@ -1,9 +1,10 @@
 import React from "react";
 import pdf from '../images/AlexandraOlsavskyResume.pdf';
+import Container from '@mui/material/Container';
 
 const ResumeView = () => {
   return (
-    <div>
+    <Container maxWidth="md">
       <iframe 
         src={pdf}
         width='100%'
@@ -12,7 +13,7 @@ const ResumeView = () => {
         allow="autoplay"
       >
       </iframe>
-    </div>
+    </Container>
   );
 }
 

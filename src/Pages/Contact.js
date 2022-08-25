@@ -15,7 +15,7 @@ function contactPage() {
             direction="column"
             alignItems="center"
             justifyContent="center"
-            style={{ minHeight: '75vh' }}
+            // style={{ minHeight: '75vh' }}
         >
             <Typography variant="h2" sx={{color: 'primary.dark'}}>Get in Touch</Typography>
             <Typography variant="subtitle1">(Don't worry, I don't bite!)</Typography>

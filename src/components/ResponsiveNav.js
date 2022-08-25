@@ -9,7 +9,8 @@ import {
     Container,
     Button,
     Menu,
-    MenuItem
+    MenuItem,
+    ButtonGroup
 } from '@mui/material';
 
 import MenuIcon from '@mui/icons-material/Menu';
@@ -79,15 +80,23 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
+            <ButtonGroup
+                orientation="vertical"
+                aria-label="vertical contained button group"
+                variant="text"
+            >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">
-                        <Link to={`/react-portfolio/${page}`}>
+                        <Link style={{textDecoration: 'none'}} to={`/react-portfolio/${page}`}>
+                        <Button key={page} sx={{ my: 2, color: 'primary.dark', textDecoration: 'none' }}>
                         {page}
+                        </Button>
                         </Link>
                     </Typography>
                 </MenuItem>
               ))}
+              </ButtonGroup>
             </Menu>
           </Box>
           <Typography
@@ -109,17 +118,19 @@ const ResponsiveAppBar = () => {
             A|O
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <ButtonGroup variant="text" aria-label="outlined primary button group">
             {pages.map((page) => (
-                <Link key={page} to={`/react-portfolio/${page}`}>
+                <Link style={{textDecoration: 'none'}} key={page} to={`/react-portfolio/${page}`}>
                     <Button
                         key={page}
                         onClick={handleCloseNavMenu}
-                        sx={{ my: 2, color: 'white', display: 'block' }}
+                        sx={{ my: 2, color: 'white', display: 'block', textDecoration: 'none' }}
                     >
                         {page}
                     </Button>
                 </Link>
             ))}
+            </ButtonGroup>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
