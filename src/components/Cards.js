@@ -10,7 +10,9 @@ import {
     CardActions,
     Collapse,
     IconButton,
-    Typography
+    Typography,
+    Grid,
+    Box
 } from '@mui/material';
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -38,19 +40,20 @@ const Cards = (props) => {
   };
 
   return (
-    <Card sx={{ m: 2 }}>
+    <Grid item xs={12} sm={6} md={6} lg={4}>
+    <Card sx={{ m: 2, backgroundColor: "secondary.light"}}>
       <CardHeader
         title={props.title}
         subheader={props.subheader}
       />
       <CardMedia
         component="img"
-        height="194"
+        height="400"
         image={props.image}
         alt={props.title}
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" paragraph>
           {props.description}
         </Typography>
       </CardContent>
@@ -72,15 +75,19 @@ const Cards = (props) => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>
-            Technologies Used:
+        <Typography paragraph>
+            Details: {props.details}
           </Typography>
           <Typography paragraph>
-            {props.technologies}
+            Responsibilities: {props.responsibilities}
+          </Typography>
+          <Typography paragraph>
+            Technologies Used: {props.technologies}
           </Typography>
         </CardContent>
       </Collapse>
     </Card>
+    </Grid>
   );
 }
 

@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 function About() {
     return (
         <>
-        <Paper elevation={3} sx={{ m: 5, p: 5, borderColor: "primary.light"}}>
+        <Paper elevation={3} sx={{ m: 5, p: 5, borderColor: "primary.light", backgroundColor: "secondary.light"}}>
             <Typography variant="h5" sx={{ color: "primary.dark", textDecoration:"underline", pb: 3 }}>
                 The Full(er) Story
             </Typography>
