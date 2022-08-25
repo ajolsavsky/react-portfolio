@@ -16,7 +16,7 @@ function resumePage() {
             justifyContent="center"
             style={{ minHeight: '75vh' }}
         >
-        <Typography variant="h2" sx={{color: 'primary.dark'}}>Resume</Typography>
+        <Typography variant="h2" sx={{color: 'primary.dark', mt: 5 }}>Resume</Typography>
         <ResumeView />
         <ResumeDownload />
         </Grid>

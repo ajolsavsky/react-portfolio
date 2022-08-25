@@ -65,8 +65,7 @@ const ContactForm = () => {
   }
 
   return (
-        <Container maxWidth="md" sx={{ p: 5, backgroundColor: 'background.paper',
-        opacity: [0.9, 0.8, 0.7]}}>
+        <Container maxWidth="md" sx={{ p: 5 }}>
             <Box component="form" ref={form} onSubmit={sendEmail} 
              sx={{ m: 5 }}noValidate autoComplete="off">
 

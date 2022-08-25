@@ -17,7 +17,7 @@ function contactPage() {
             justifyContent="center"
             // style={{ minHeight: '75vh' }}
         >
-            <Typography variant="h2" sx={{color: 'primary.dark'}}>Get in Touch</Typography>
+            <Typography variant="h2" sx={{color: 'primary.dark', mt: 5 }}>Get in Touch</Typography>
             <Typography variant="subtitle1">(Don't worry, I don't bite!)</Typography>
         <ContactForm />
         </Grid>

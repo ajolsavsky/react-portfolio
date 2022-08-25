@@ -17,7 +17,7 @@ function portfolioPage() {
             direction="row"
             alignItems="center"
             justifyContent="center"
-        ><Typography variant="h2" sx={{color: 'primary.dark'}}>Portfolio</Typography></Grid>
+        ><Typography variant="h2" sx={{color: 'primary.dark', mt: 5 }}>Portfolio</Typography></Grid>
         <Grid
             container
             direction="row"

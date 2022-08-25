@@ -13,21 +13,22 @@ import Image from 'react-bootstrap/Image'
 function homePage() {
     return (
         <>
-        <Box>
-        <Grid container direction="row" justifyContent="center" alignItems="center">
-  <Grid item xs>
-    <Box sx={{m: 10}}>
-        <Typography variant="h2" sx={{ color: "primary.dark" }}>Hi, I'm Alex Olsavsky!</Typography>
-        <Typography variant="h5">I'm a software developer with roots as a nonprofit leader and professional singer.</Typography>
-    </Box>
-  </Grid>
-  <Grid item xs>
-  <Box sx={{mt: 10, mr: 5 }}>
-  <Image roundedCircle fluid
+        <Box sx={{ flexGrow: 1 }}>
+        <Grid container columns={{ xs: 4, sm: 8, md: 12 }} direction="row" justifyContent="center" alignItems="center">
+  <Grid item xs={6} sm={4} md={4}>
+  <Box sx={{ mt: 5, mr: 5, ml: 5 }}>
+  <Image roundedCircle
                 src={headshot}
                 alt="Alex Olsavsky Headshot"
+                width="100%"
                 />
                 </Box>
+  </Grid>
+  <Grid item xs={6} sm={4} md={8}>
+    <Box sx={{mt: 5, mr: 5, ml: 5 }}>
+        <Typography variant="h2" sx={{ color: "primary.dark" }}>Hi, I'm Alex Olsavsky!</Typography>
+        <Typography variant="h5">I'm a software developer with roots as a nonprofit leader, arts educator, and professional singer.</Typography>
+    </Box>
   </Grid>
 </Grid>
 </Box>
