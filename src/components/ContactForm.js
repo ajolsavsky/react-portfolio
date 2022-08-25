@@ -1,11 +1,15 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import Box from '@mui/material/Box';
-// import TextField from '@mui/material/TextField';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
+import Container from '@mui/material/Container';
 
 
 const ContactForm = () => {
   const form = useRef();
+
   const initialValues = { user_name: "", user_email: "", message: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -18,18 +22,22 @@ const ContactForm = () => {
   }
   
   
-  const sendEmail = (e) => {
-      
-      e.preventDefault();
-      setFormErrors(validate(formValues));
-      setIsSubmit(true);
-      
-      emailjs.sendForm('service_hpg0czm', 'contact_form', form.current, '6gnYWh9TuBhzTn5Vs')
-      .then((result) => {
-          console.log(result.text, form.current);
+  //Email submit handler
+    const sendEmail = (e) => {
+    const UseEmailJs = () => {
+        emailjs.sendForm('service_hpg0czm', 'contact_form', form.current, '6gnYWh9TuBhzTn5Vs')
+        .then((result) => {
+            console.log(result.text, form.current);
         }, (error) => {
             console.log(error.text);
         });
+    }
+      
+      e.preventDefault();
+      setFormErrors(validate(formValues));
+      UseEmailJs();
+      setIsSubmit(true);
+      
     };
     
     useEffect(() => {
@@ -57,38 +65,65 @@ const ContactForm = () => {
   }
 
   return (
-        <div className="container">
-            {Object.keys(formErrors).length === 0 && isSubmit ? (
+        <Container maxWidth="md" sx={{ p: 5, mt: 10, borderColor: 'primary.light', border: '1px solid'}}>
+            <Box component="form" ref={form} onSubmit={sendEmail} 
+             sx={{ m: 5 }}noValidate autoComplete="off">
+
+        {Object.keys(formErrors).length === 0 && isSubmit ? (
                 <div className="ui message success">Message sent!</div>
             ) : (
-                <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
+                <div></div>
             )}
-        <form ref={form} onSubmit={sendEmail}>
-            <Box>
-        <label>Name</label>
-        <input 
-            type="text" 
-            name="user_name" 
-            value={formValues.user_name}
-            onChange={handleChange}/>
-        <p>{ formErrors.user_name }</p>
-        <label>Email</label>
-        <input 
-            type="email" 
-            name="user_email" 
-            value={ formValues.user_email }
-            onChange={handleChange} />
-        <p>{ formErrors.user_email }</p>
-        <label>Message</label>
-        <textarea 
-            name="message" 
-            value={ formValues.message }
-            onChange={handleChange} />
-        <p>{ formErrors.message }</p>
-        <input type="submit" value="Send" />
+            <Box sx={{ m: 2}}>
+            <TextField fullWidth
+                required
+                id="filled-required"
+                variant="filled"
+                label="NAME"
+                type="text" 
+                name="user_name" 
+                value={formValues.user_name}
+                onChange={handleChange}
+                helperText={ formErrors.user_name }
+                sx={{ backgroundColor: ''}}
+            />
+
             </Box>
-        </form>
-        </div>
+            <Box sx={{ m: 2}}>
+            <TextField fullWidth
+                required
+                id="filled-required"
+                variant="filled"
+                label="EMAIL"
+                type="text" 
+                name="user_email" 
+                value={ formValues.user_email }
+                onChange={handleChange}
+                helperText={ formErrors.user_email }
+                sx={{width: 'sm' }}
+            />
+            </Box>
+            <Box sx={{ m: 2 }}>
+            <TextField fullWidth
+                id="outlined-multiline-static-required fullWidth"
+                label="MESSAGE *"
+                multiline
+                rows={6}
+                value={ formValues.message }
+                name="message"
+                onChange={handleChange}
+                helperText={ formErrors.message }
+            />
+            </Box>
+            <Box>
+            <Button variant="contained" type="submit" value="Send" endIcon={<SendIcon />} sx={{backgroundColor: 'secondary.light',
+                '&:hover': {
+                  backgroundColor: '#fff',
+                  opacity: [0.9, 0.8, 0.7]} }}>Send</Button>
+            </Box>
+        </Box>
+        </Container>
+        
   );
 };
 
