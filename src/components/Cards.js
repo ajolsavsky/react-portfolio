@@ -38,7 +38,7 @@ const Cards = (props) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ m: 2 }}>
       <CardHeader
         title={props.title}
         subheader={props.subheader}
