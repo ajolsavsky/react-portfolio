@@ -5,6 +5,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 
 
 const ContactForm = () => {
@@ -37,7 +38,6 @@ const ContactForm = () => {
       setFormErrors(validate(formValues));
       UseEmailJs();
       setIsSubmit(true);
-      
     };
     
     useEffect(() => {
@@ -65,16 +65,12 @@ const ContactForm = () => {
   }
 
   return (
-        <Container maxWidth="md" sx={{ p: 5, mt: 10, borderColor: 'primary.light', border: '1px solid'}}>
+        <Container maxWidth="md" sx={{ p: 5, backgroundColor: 'background.paper',
+        opacity: [0.9, 0.8, 0.7]}}>
             <Box component="form" ref={form} onSubmit={sendEmail} 
              sx={{ m: 5 }}noValidate autoComplete="off">
 
-        {Object.keys(formErrors).length === 0 && isSubmit ? (
-                <div className="ui message success">Message sent!</div>
-            ) : (
-                <div></div>
-            )}
-            <Box sx={{ m: 2}}>
+            <Box sx={{ m: 2 }}>
             <TextField fullWidth
                 required
                 id="filled-required"
@@ -115,12 +111,19 @@ const ContactForm = () => {
                 helperText={ formErrors.message }
             />
             </Box>
-            <Box>
-            <Button variant="contained" type="submit" value="Send" endIcon={<SendIcon />} sx={{backgroundColor: 'secondary.light',
+            <Grid container justifyContent="center">
+            <Button variant="contained" type="submit" value="Send" endIcon={<SendIcon />} sx={{backgroundColor: 'primary.light',
                 '&:hover': {
-                  backgroundColor: '#fff',
-                  opacity: [0.9, 0.8, 0.7]} }}>Send</Button>
-            </Box>
+                    backgroundColor: '#fff',
+                    opacity: [0.9, 0.8, 0.7]} }}>Send</Button>
+            </Grid>
+            <Grid container justifyContent="center" sx={{ mt: 1 }}>
+            {Object.keys(formErrors).length === 0 && isSubmit ? (
+                <div className="ui message success">Message sent!</div>
+            ) : (
+                <div></div>
+            )}
+            </Grid>
         </Box>
         </Container>
         
