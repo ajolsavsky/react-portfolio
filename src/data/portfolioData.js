@@ -1,5 +1,6 @@
 import TinyTriumphs from "../images/TinyTriumphs.png"
-
+import looapp from "../images/looapp.png"
+import weatherdashboard from "../images/weatherdashboard.png"
 
 const portfolioData = [
     {
@@ -7,7 +8,7 @@ const portfolioData = [
         title: "Tiny Triumphs",
         subheader: "Medical Milestone Tracker/Database",
         image: TinyTriumphs,
-        description: "MVC pattern medical and developmental milestone tracking app for children ages 0-6",
+        description: "MVC pattern medical and developmental milestone tracking app for children ages 0-6.",
         deployedApp: "https://tinytriumphs.herokuapp.com",
         githubRepo: "https://github.com/tinyTriumphs/tinyTriumphs",
         technologies: "MySQL, Sequelize, Express.js, Node.js, Handlebars.js, Heroku, Bootstrap, AWS/Multer",
@@ -16,23 +17,25 @@ const portfolioData = [
     },
     {
         id: 2,
-        title: "Another title",
-        subheader: "More about the project",
-        image: "https://i.picsum.photos/id/1003/1181/1772.jpg?hmac=oN9fHMXiqe9Zq2RM6XT-RVZkojgPnECWwyEF1RvvTZk",
-        description: "This is a project all about space! I am testing this now.",
-        deployedApp: "https://ajo-text-editor.herokuapp.com/",
-        githubRepo: "https://github.com/ajolsavsky",
-        technologies: "Node, MongoDB, special space junk"
+        title: "LOO",
+        subheader: "Accessible Bathroom Geolocator",
+        image: looapp,
+        description: "This is an app that finds gender neutral and accessible public restrooms near you.",
+        deployedApp: "https://safe-haven-bathrooms.github.io/App/",
+        githubRepo: "https://github.com/Safe-Haven-Bathrooms/App",
+        technologies: "JavaScript, Tailwind CSS, jQuery, Google Maps API, Refuge Restrooms API",
+        details: "This app finds gender neutral and accessible public restrooms nearest to the user via geolocation or Google Map search.",
+        responsibilities: "Project management, implementation of the Refuge Restrooms API data display, local storage, and Tailwind CSS."
     },
     {
         id: 3,
-        title: "A third project",
-        subheader: "More about the project",
-        image: "https://i.picsum.photos/id/1006/3000/2000.jpg?hmac=x83pQQ7LW1UTo8HxBcIWuRIVeN_uCg0cG6keXvNvM8g",
-        description: "This is a project all about space! I am testing this now.",
-        deployedApp: "https://ajo-text-editor.herokuapp.com/",
-        githubRepo: "https://github.com/ajolsavsky",
-        technologies: "Node, MongoDB, special space junk"
+        title: "Weather Dashboard",
+        subheader: "Searchable Weather App",
+        image: weatherdashboard,
+        description: "A searchable weather app that provides location-based present/future forecasting.",
+        deployedApp: "https: //ajolsavsky.github.io/weather-dashboard/",
+        githubRepo: "https://github.com/ajolsavsky/weather-dashboard",
+        technologies: "JavaScript, Bootstrap, jQuery, Moment.js"
     },
     {
         id: 4,
