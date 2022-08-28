@@ -58,10 +58,18 @@ const Cards = (props) => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="github repo">
+        <IconButton 
+          aria-label="github repo" 
+          href={props.githubRepo}
+          target="_blank"
+        >
           <GitHubIcon />
         </IconButton>
-        <IconButton aria-label="deployed app">
+        <IconButton
+          aria-label="github repo" 
+          href={props.deployedApp}
+          target="_blank"
+        >
           <InsertLinkIcon />
         </IconButton>
         <ExpandMore
