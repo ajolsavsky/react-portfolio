@@ -1,11 +1,14 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.bd09656b.css",
-    "main.js": "/react-portfolio/static/js/main.4f85befe.js",
+    "main.js": "/react-portfolio/static/js/main.93db8cca.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/looapp.png": "/react-portfolio/static/media/looapp.5d9554ab540dc55ad03f.png",
     "static/media/headshot.png": "/react-portfolio/static/media/headshot.72c57c14e7736005e5ec.png",
     "static/media/weatherdashboard.png": "/react-portfolio/static/media/weatherdashboard.79e858f6356822ea3c4b.png",
+    "static/media/employeetracker.png": "/react-portfolio/static/media/employeetracker.edfead45b932b999a52f.png",
+    "static/media/notetaker.png": "/react-portfolio/static/media/notetaker.7457b9447788eaf35b89.png",
+    "static/media/ecommerce.png": "/react-portfolio/static/media/ecommerce.f65f1b396648427e12cb.png",
     "static/media/TinyTriumphs.png": "/react-portfolio/static/media/TinyTriumphs.3aecf40b6d6c8e22d965.png",
     "static/media/roboto-all-500-normal.woff": "/react-portfolio/static/media/roboto-all-500-normal.0ab669b7a0d19b178f57.woff",
     "static/media/roboto-all-700-normal.woff": "/react-portfolio/static/media/roboto-all-700-normal.a457fde362a540fcadff.woff",
@@ -42,11 +45,11 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "/react-portfolio/static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "index.html": "/react-portfolio/index.html",
     "main.bd09656b.css.map": "/react-portfolio/static/css/main.bd09656b.css.map",
-    "main.4f85befe.js.map": "/react-portfolio/static/js/main.4f85befe.js.map",
+    "main.93db8cca.js.map": "/react-portfolio/static/js/main.93db8cca.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bd09656b.css",
-    "static/js/main.4f85befe.js"
+    "static/js/main.93db8cca.js"
   ]
 }
